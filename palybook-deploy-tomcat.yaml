@@ -8,7 +8,7 @@
       raw: sudo chmod o+rwx /opt/tomcat/webapps
 
     - name: Copy WAR to webapps
-      copy: src=./hello.war dest=/opt/tomcat/webapps/hello.war owner=tomcat group=tomcat mode=0744
+      copy: src=target/gree*.war dest=/opt/tomcat/webapps/hello.war owner=tomcat group=tomcat mode=0744
 
     - name: Re-establish the default protection to write to webapps folder
       raw: sudo chmod o-rwx /opt/tomcat/webapps
